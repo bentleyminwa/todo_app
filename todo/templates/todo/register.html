@@ -1,0 +1,21 @@
+{%extends 'todo/main.html'%}
+
+{%block content%}
+	<div class="register-container">
+	  <form method="post" novaldiate class="register-form">
+	  	{% csrf_token %}
+	    <h1>Create your account</h1>
+		{% for field in form %}
+	    		{{ field.label_tag }} 
+	        	{{ field }}
+	        	{% if field.errors %}
+	        		<small class="error">{{ field.errors|striptags  }}</small> 
+	        	{% endif %}
+		{% endfor %}
+		
+		<input type="submit" value="Register">
+		<hr>
+		<p style="padding-bottom: 10px; font-size: 0.8em; text-align: center;">Already have an account? <a href="{% url 'login'%}">Login</a></p>
+		</form>
+	</div>
+{% endblock %}

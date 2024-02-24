@@ -1,0 +1,13 @@
+{% extends 'todo/main.html' %}
+
+{% block content %}
+    <p><a href="{% url 'tasks' %}" style="text-decoration: none;"><i class="fa-solid fa-arrow-left icon back-icon" ></i><span class="back" style="color: #292F36;">Back</span></a></p>
+    <div class="delete-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Are you sure you want to delete this task? <span class="delete-item"> "{{ task.title }}"</span></p>
+            <input type="submit" value="Yes">
+        </form>
+    </div>
+    
+{% endblock %}

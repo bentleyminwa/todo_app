@@ -1,0 +1,375 @@
+body {
+    background-image: url("../images/bg-image2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Nunito', sans-serif;
+}
+
+.wrapper {
+    background-color: #F7FFF7;
+    width: 50%;
+    min-height: 30vh;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 1.4em;
+    border: 2px solid #292F36;
+    border-radius: 4px;
+    box-shadow: 1.5px 1.5px 4px #999;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #3C474B 0%, #3C474B 43%, #292F36 100%);
+} 
+
+.nav-bar .logo {
+    padding: 10px;
+    font-size: 1em;
+    color: #68B684;
+}
+
+.nav-bar .logo p {
+    font-size: 0.85em;
+}
+
+.nav-bar .logout-content {
+    padding: 10px;
+}
+
+
+.nav-bar .logout-content .btn {
+    background: none;
+    border: none;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #68B684;
+    outline: none;
+}
+
+.nav-bar .logout-content .btn:hover{
+    color: #80C2AF;
+    transition: 0.3s all ease-in-out;
+}
+
+.search-bar {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.search-bar input {
+    width: 30%;
+    height: 25px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.78em;
+    padding-left: 5px;
+    color: #333;
+}
+
+.search-bar .btn {
+    margin: 0;
+    border: none;
+    background: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.task-header {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #68B684;
+}
+
+.task-list {
+    width: 100%;
+}
+
+.task-list .task {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    width: inherit;
+}
+
+.task-list .task .operation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-list .task p {
+    color: #292F36;
+    border-bottom: 0.3px solid #999;
+    margin-left: 10px;
+}
+
+.icon {
+    font-size: 1em;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.delete-icon {
+    color: #FF6B6B;
+}
+
+.add-icon {
+    color: #80C2AF;
+    padding-top: 20px;
+    align-self: flex-end;
+}
+
+.update-icon {
+    color: #80C2AF;
+}
+
+.login-container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.login-container h1 {
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: #68B684;
+    font-weight: bold;
+}
+
+.login-container .login-form {
+    padding-bottom: 30px;
+    width: inherit;
+    display: block;
+}
+
+.login-container .login-form label {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.login-container .login-form input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding-left: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #555;
+}
+
+.login-container .login-form input[type="text"] {
+    margin: 5px 0;
+}
+
+.login-container .login-form input[type="password"] {
+    margin: 5px 0;
+}
+
+.login-container .login-form input[type="submit"] {
+    margin-top: 20px;
+    background-color: #68B684;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-container .login-form input[type="submit"]:hover {
+    background-color: #80C2AF;
+    transition: 0.3s all ease-in-out;
+}
+
+.register-container {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+
+.register-container h1 {
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: #68B684;
+    font-weight: bold;
+}
+
+.register-container .register-form {
+    padding-bottom: 30px;
+    width: inherit;
+    display: block;
+}
+
+.register-container .register-form label {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.register-container .register-form input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding-left: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #555;
+}
+
+.register-container .register-form input[type="text"] {
+    margin: 5px 0;
+}
+
+.register-container .register-form input[type="password"] {
+    margin: 5px 0;
+}
+
+.register-container .register-form input[type="submit"] {
+    margin-top: 20px;
+    background-color: #68B684;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.register-container .register-form input[type="submit"]:hover {
+    background-color: #80C2AF;
+    transition: 0.3s all ease-in-out;
+}
+
+.entry-container {
+    height: 80vh;
+    display: block;
+    padding-top: 20px;
+}
+
+.entry-container a {
+    text-decoration: none;
+}
+
+.back-icon {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    color: #FF6B6B;
+    font-size: 0.9em;
+}
+
+.back {
+    font-size: 0.9em;
+    color: #292F36;
+    padding-left: 10px;
+}
+
+.entry-container .form-card {
+    padding-bottom: 30px;
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.entry-container .form-card label {
+    color: #68B684;
+    font-size: 0.9em;
+    padding-left: 25px;
+    padding-bottom: 5px;
+}
+
+.entry-container .form-card input[type="text"] {
+    width: 90%;
+    height: 20px;
+    margin-left: 25px;
+    padding-bottom: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #555;
+    background: none;
+    padding-left: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #292F36;
+}
+
+.entry-container .form-card textarea {
+    margin-left: 25px;
+    outline: none;
+    border: 1px solid #555;
+    border-radius: 3px;
+    padding-left: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #292F36;
+    width: 90%;
+    height: 30vh;
+}
+
+.entry-container .form-card input[type="checkbox"] {
+    display: inline;
+    align-self: center;
+    padding-left: 10px;
+}
+
+.entry-container .form-card input[type="submit"] {
+    margin-left: 25px;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #68B684;
+    color: #292F36;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: lowercase;
+
+}
+
+.entry-container .form-card input[type="submit"]:hover {
+    background-color: #80C2AF;
+    transition: 0.3s all ease-in-out;
+}
+
+.delete-container {
+    width: 90%;
+    text-align: center;
+}
+
+.delete-container p {
+    color: #292F36;
+    font-weight: 800;
+}
+
+.delete-container .delete-item {
+    color: #FF6B6B;
+}
+
+.delete-container input[type="submit"] {
+    margin-left: 25px;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 20px;
+    background-color: #68B684;
+    color: #292F36;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+
+.delete-container input[type="submit"]:hover {
+    background-color: #80C2AF;
+    transition: 0.3s all ease-in-out;
+}

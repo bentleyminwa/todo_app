@@ -1,0 +1,48 @@
+{% extends 'todo/main.html' %}
+
+{% block content %}
+    <nav class="nav-bar">
+        <div class="logo">
+            <h2>Hello {{ request.user|title }}</h2>
+            <p style="color: #F7FFF7;">You have <i>{{ count }}</i> incomplete tasks</p>
+        </div>
+        <div class="logout-content">
+            {% if request.user.is_authenticated %}
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Logout" class="btn btn-logout">
+                </form>
+            {% else %}
+                <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Login" class="btn">
+                </form>
+            {% endif %}
+            <a href="{% url 'task-create' %}"><i class="fa-solid fa-plus icon add-icon"></i></a>
+        </div>
+    </nav>
+
+    <div class="search-bar">
+        <form action="" method="get">
+            <input type="text" name="search-area" value="{{ search_input }}">
+            <button type="submit" class="btn" style="outline: none;"><i class="fa-solid fa-magnifying-glass" class="icon search-icon"></i></button>
+        </form>
+    </div>
+        
+    
+    
+    <h2 class="task-header">My To Do List</h2>
+    <div class="task-list">
+        <div class="task">
+            {% for task in tasks %}
+                <p>{{ task.title }}</p>
+                <div class="operation">
+                    <a href="{% url 'task-update' task.id %}"><i class="fa-regular fa-pen-to-square icon update-icon"></i></a>
+                    <a href="{% url 'task-delete' task.id %}"><i class="fa-regular fa-trash-can icon delete-icon"></i></a>
+                </div>
+            {% empty %}
+                <h3 style="padding-left: 15px; font-size: 1em; font-weight: bold; color: #292F36;">No items in the list</h4>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

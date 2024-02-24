@@ -1,0 +1,13 @@
+{% extends 'todo/main.html' %}
+
+{% block content %}
+    <div class="entry-container">
+        <p><a href="{% url 'tasks' %}"><i class="fa-solid fa-arrow-left icon back-icon"></i> <span class="back">Back</span></a></p>
+        <form action="" method="post" class="form-card">
+            {% csrf_token %}
+                {{ form.as_p }}
+            <input type="submit" value="Add Task">
+        </form>
+    </div>
+    
+{% endblock %}
